@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /*preenche toda a altura da view*/
+    background-color: #f5f5f5;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  #calculadora {
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1); /*para dar sombreamento nas margens da brda*/ 
+  }
+  
+  #display {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: flex-end; /*para colocar o input no final*/
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box; /* para o input nao sair da bora nao ir para fora*/
+  }
+  
+  #displayInput {
+    text-align: right;
+    width: 100%;
+    border: none; /*sem bordas*/
+  }
+  
+  #teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*o grid, que faz desenho de linha, e faz 
+    repeticao das linhas em 4 casas numa linha*/
+  }
+  
+  button {
+    height: 60px;
+    border: none;
+    font-size: 2em;
+    transition: background-color 0.3s ease; /*pra fzer o houver, para fazer uma transicao e mudar linearmente*/
+    cursor: pointer; /*o cursor point para mudar o ponteiro do mouse qndo passamos o cursor do mouse*/
+  }
+  
+  button:hover {
+    background-color: #ccc6c6;
+  }
+  
+  button:active {
+    background-color: #eee;
+  }
+  
+  button.num,     /* para mudar o conjunto dos botoes, num, ponto e igual*/
+  button.ponto,
+  button.igual {
+    color: #333;
+  }
+  
+  button.operador {  /* para alterar os botao operador*/
+    color: #f7931b;
+  }
